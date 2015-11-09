@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Outcast.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Outcast.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Outcast.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.49481866">
+              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
               <folding>
                 <element signature="e#132#133#0" expanded="true" />
                 <element signature="e#170#171#0" expanded="true" />
@@ -47,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WordNet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WordNet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WordNet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7938719">
-              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.6666665">
+              <caret line="134" column="43" selection-start-line="134" selection-start-column="43" selection-end-line="134" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1827#1828#0" expanded="true" />
@@ -80,9 +80,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Outcast.java" />
         <option value="$PROJECT_DIR$/src/SAP.java" />
         <option value="$PROJECT_DIR$/src/WordNet.java" />
+        <option value="$PROJECT_DIR$/src/Outcast.java" />
       </list>
     </option>
   </component>
@@ -166,7 +166,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.WordNet">
+  <component name="RunManager" selected="Application.Outcast">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -441,9 +441,25 @@
       <envs />
       <method />
     </configuration>
-    <list size="2">
+    <configuration default="false" name="Outcast" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Outcast" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="week-6" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.SAP" />
       <item index="1" class="java.lang.String" itemvalue="Application.WordNet" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Outcast" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -608,27 +624,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Outcast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#132#133#0" expanded="true" />
-            <element signature="e#170#171#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/WordNet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7938719">
-          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.6666665">
+          <caret line="134" column="43" selection-start-line="134" selection-start-column="43" selection-end-line="134" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1827#1828#0" expanded="true" />
             <element signature="e#1870#1871#0" expanded="true" />
             <element signature="e#5114#5115#0" expanded="true" />
             <element signature="e#5148#5149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Outcast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49481866">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding>
+            <element signature="e#132#133#0" expanded="true" />
+            <element signature="e#170#171#0" expanded="true" />
           </folding>
         </state>
       </provider>
