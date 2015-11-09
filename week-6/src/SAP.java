@@ -9,13 +9,6 @@ import java.util.*;
  */
 public class SAP {
 
-    private Digraph graph;
-
-    // constructor takes a digraph (not necessarily a DAG)
-    public SAP(Digraph G) {
-        this.graph = new Digraph(G);
-    }
-
     private class Node {
         final int value;
         final int distance;
@@ -24,6 +17,16 @@ public class SAP {
             this.value = value;
             this.distance = distance;
         }
+    }
+
+    private Digraph graph;
+
+    // constructor takes a digraph (not necessarily a DAG)
+    public SAP(Digraph G) {
+        if (G == null) {
+            throw new java.lang.NullPointerException();
+        }
+        this.graph = new Digraph(G);
     }
 
     // length of shortest ancestral path between v and w; -1 if no such path
@@ -42,6 +45,9 @@ public class SAP {
 
     // length of shortest ancestral path between any vertex in v and any vertex in w; -1 if no such path
     public int length(Iterable<Integer> v, Iterable<Integer> w) {
+        if (v == null || w == null) {
+            throw new java.lang.NullPointerException();
+        }
         Set<Integer> vSet = convertIterableToSet(v);
         Set<Integer> wSet = convertIterableToSet(w);
         Node minDistanceNode = getSAPNode(vSet, wSet);
@@ -54,6 +60,9 @@ public class SAP {
 
     // a common ancestor that participates in shortest ancestral path; -1 if no such path
     public int ancestor(Iterable<Integer> v, Iterable<Integer> w) {
+        if (v == null || w == null) {
+            throw new java.lang.NullPointerException();
+        }
         Set<Integer> vSet = convertIterableToSet(v);
         Set<Integer> wSet = convertIterableToSet(w);
         Node minDistanceNode = getSAPNode(vSet, wSet);
@@ -75,6 +84,16 @@ public class SAP {
     }
 
     private Node getSAPNode(Iterable<Integer> v, Iterable<Integer> w) {
+        for (int i : v) {
+            if (i < 0 || i >= graph.V()) {
+                throw new java.lang.IndexOutOfBoundsException();
+            }
+        }
+        for (int j : w) {
+            if (j < 0 || j >= graph.V()) {
+                throw new java.lang.IndexOutOfBoundsException();
+            }
+        }
         // First, get hashmap that maps distance frm v to everything it can reach.
         Map<Integer, Integer> distanceToVMap = new HashMap<>();
         Queue<Node> bfsQueue = new Queue<>();
@@ -103,7 +122,7 @@ public class SAP {
         }
         // additional requirement here is that distance is shorter than min distance, since otherwise can just
         // return that.
-        while (!bfsQueue.isEmpty() && bfsQueue.peek().value < minDistanceNode.distance) {
+        while (!bfsQueue.isEmpty() && bfsQueue.peek().distance < minDistanceNode.distance) {
             Node currentNode = bfsQueue.dequeue();
             minDistanceNode = checkForNewMinNode(minDistanceNode, currentNode, distanceToVMap);
             for (int neighbor : graph.adj(currentNode.value)) {
@@ -147,12 +166,12 @@ public class SAP {
     // do unit testing of this class
     public static void main(String[] args) {
 
-        In in = new In(new File("/Users/theluxury/Documents/algs/week-6/wordnet/digraph1.txt"));
+        In in = new In(new File("/Users/theluxury/Documents/algs/week-6/wordnet/digraph2.txt"));
         Digraph graph = new Digraph(in);
         SAP sap = new SAP(graph);
-        int v = 9;
-        int w = 12;
-        int length   = sap.length(v, w);
+        int v = -1;
+        int w = 5;
+        int length = sap.length(v, w);
         int ancestor = sap.ancestor(v, w);
         StdOut.printf("length = %d, ancestor = %d\n", length, ancestor);
     }
