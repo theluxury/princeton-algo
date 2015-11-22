@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72149fa0-f8b7-432c-a15e-14a4828689b4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/algs4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PrintEnergy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PrintSeams.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SeamCarver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../week-4/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../week-4/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../week-6/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../week-6/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ResizeDemo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SeamCarver.java" afterPath="$PROJECT_DIR$/src/SeamCarver.java" />
     </list>
     <ignored path="week-7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,19 +26,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SeamCarver.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SeamCarver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SeamCarver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="93" column="46" selection-start-line="93" selection-start-column="46" selection-end-line="93" selection-end-column="46" />
+            <state vertical-scroll-proportion="3.426184">
+              <caret line="82" column="35" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#730#731#0" expanded="true" />
-                <element signature="e#760#761#0" expanded="true" />
-                <element signature="e#818#819#0" expanded="true" />
-                <element signature="e#856#857#0" expanded="true" />
-                <element signature="e#916#917#0" expanded="true" />
-                <element signature="e#955#956#0" expanded="true" />
+                <element signature="e#675#676#0" expanded="true" />
+                <element signature="e#718#719#0" expanded="true" />
+                <element signature="e#777#778#0" expanded="true" />
+                <element signature="e#815#816#0" expanded="true" />
+                <element signature="e#875#876#0" expanded="true" />
+                <element signature="e#914#915#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResizeDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ResizeDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,7 +61,7 @@
         <entry file="jar://$PROJECT_DIR$/../algs4.jar!/edu/princeton/cs/algs4/Picture.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="241" column="0" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
+              <caret line="259" column="0" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
               <folding>
                 <element signature="e#6128#6129#0" expanded="true" />
                 <element signature="e#6169#6170#0" expanded="true" />
@@ -75,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrintSeams.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PrintSeams.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PrintSeams.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22279793">
-              <caret line="62" column="14" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="62" column="100" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="100" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -110,13 +118,14 @@
       <list>
         <option value="$PROJECT_DIR$/src/PrintEnergy.java" />
         <option value="$PROJECT_DIR$/src/PrintSeam.java" />
-        <option value="$PROJECT_DIR$/src/SeamCarver.java" />
         <option value="$PROJECT_DIR$/src/PrintSeams.java" />
+        <option value="$PROJECT_DIR$/src/ResizeDemo.java" />
+        <option value="$PROJECT_DIR$/src/SeamCarver.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="18" />
+    <option name="x" value="-44" />
     <option name="y" value="23" />
     <option name="width" value="1260" />
     <option name="height" value="709" />
@@ -211,7 +220,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.Print seams">
+  <component name="RunManager" selected="Application.resizing demo">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -456,9 +465,9 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="Print seams" type="Application" factoryName="Application">
+    <configuration default="false" name="resizing demo" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="PrintSeams" />
+      <option name="MAIN_CLASS_NAME" value="ResizeDemo" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -472,7 +481,7 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.Print seams" />
+      <item index="0" class="java.lang.String" itemvalue="Application.resizing demo" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -486,7 +495,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="18" y="23" width="1260" height="709" extended-state="0" />
+    <frame x="-44" y="23" width="1260" height="709" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -533,12 +542,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#856#857#0" expanded="true" />
-            <element signature="e#916#917#0" expanded="true" />
-            <element signature="e#955#956#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#875#876#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -565,10 +574,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrintSeams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="100" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="100" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$PROJECT_DIR$/../algs4.jar!/edu/princeton/cs/algs4/Picture.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="241" column="0" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
+          <caret line="259" column="0" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
           <folding>
             <element signature="e#6128#6129#0" expanded="true" />
             <element signature="e#6169#6170#0" expanded="true" />
@@ -576,29 +596,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SeamCarver.java">
+    <entry file="file://$PROJECT_DIR$/src/ResizeDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="46" selection-start-line="93" selection-start-column="46" selection-end-line="93" selection-end-column="46" />
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#856#857#0" expanded="true" />
-            <element signature="e#916#917#0" expanded="true" />
-            <element signature="e#955#956#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrintSeams.java">
+    <entry file="file://$PROJECT_DIR$/src/SeamCarver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22279793">
-          <caret line="62" column="14" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
+        <state vertical-scroll-proportion="3.426184">
+          <caret line="82" column="35" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#875#876#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
           </folding>
         </state>
       </provider>

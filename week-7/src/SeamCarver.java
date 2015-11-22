@@ -1,4 +1,3 @@
-import edu.princeton.cs.algs4.DoublingRatio;
 import edu.princeton.cs.algs4.Picture;
 
 import java.awt.*;
@@ -24,13 +23,13 @@ public class SeamCarver {
         if (picture == null) {
             throw new java.lang.NullPointerException("Null object no good.");
         }
-        this.picture = picture;
+        this.picture = new Picture(picture);
     }
 
-    // current picture
     public Picture picture() {
-        return picture;
+        return new Picture(picture);
     }
+
 
     // width of current picture
     public int width() {
@@ -77,12 +76,13 @@ public class SeamCarver {
     // sequence of indices for horizontal seam
     public int[] findHorizontalSeam() {
         transposePicture();
-        int[] horizontalSeam = findVerticalSeam();
-        transposePicture();
-//        for (int i = 0; i < horizontalSeam.length; i++) {
-//            // Think the indexing for reversed?
-//            horizontalSeam[i] = picture.height() - 1 - horizontalSeam[i];
-//        }
+        int[] horizontalSeam;
+        try {
+            horizontalSeam = findVerticalSeam();
+        } finally {
+            // transpose it back in case something went wrong.
+            transposePicture();
+        }
         return horizontalSeam;
     }
 
@@ -212,16 +212,12 @@ public class SeamCarver {
 
     // remove horizontal seam from current picture
     public void removeHorizontalSeam(int[] seam) {
-        if (seam == null) {
-            throw new java.lang.NullPointerException("Null seam no good.");
-        }
-
-        if (seam.length != picture.width()) {
-            throw new java.lang.IllegalArgumentException("Wrong width no good.");
-        }
-
-        if (picture.height() == 1) {
-            throw new java.lang.IllegalArgumentException("Height already at one dag. ");
+        transposePicture();
+        // Transpose it back in case the seam is wrong.
+        try {
+            removeVerticalSeam(seam);
+        } finally {
+            transposePicture();
         }
     }
 
@@ -236,6 +232,30 @@ public class SeamCarver {
         if (picture.width() == 1) {
             throw new java.lang.IllegalArgumentException("Width already at one dag. ");
         }
+        for (int i = 0; i < seam.length; i++) {
+            if (seam[i] < 0 || seam[i] >= picture.width()) {
+                throw new java.lang.IllegalArgumentException("Value of seam not good. ");
+            }
+            if (i != 0 && Math.abs(seam[i] - seam[i - 1]) > 1) {
+                throw new java.lang.IllegalArgumentException("Value of seam too far apart. ");
+            }
+        }
+
+        int offset = 0;
+        // Goes width, height
+        Picture newPicture = new Picture(picture.width() - 1, picture.height());
+        for (int i = 0; i < picture.height(); i++) {
+            offset = 0;
+            for (int j = 0; j < picture.width(); j++) {
+                if (seam[i] == j) {
+                    offset = -1;
+                    continue;
+                }
+                newPicture.set(j + offset, i, picture.get(j, i));
+            }
+        }
+
+        picture = newPicture;
     }
 
 
