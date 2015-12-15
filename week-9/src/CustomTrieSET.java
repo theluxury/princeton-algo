@@ -15,9 +15,17 @@ public class CustomTrieSET implements Iterable<String> {
     private int N;          // number of keys in trie
 
     // R-way trie node
-    private static class Node {
+    public static class Node {
         private Node[] next = new Node[R];
         private boolean isString;
+
+        public Node[] getNext() {
+            return next;
+        }
+
+        public boolean isString() {
+            return isString;
+        }
     }
 
     /**
@@ -26,13 +34,8 @@ public class CustomTrieSET implements Iterable<String> {
     public CustomTrieSET() {
     }
 
-    /**
-     * The Custom one. Does teh set contain any keys of the given prefix?
-     */
-
-    public boolean containsPrefix(String prefix) {
-        Node x = get(root, prefix, 0);
-        return (x != null);
+    public Node getRoot() {
+        return root;
     }
 
     /**
