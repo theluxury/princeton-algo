@@ -1,6 +1,5 @@
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
-import edu.princeton.cs.algs4.SymbolDigraph;
 
 import java.util.*;
 
@@ -9,14 +8,13 @@ import java.util.*;
  */
 public class BoggleSolver {
 
-    // This just has to be arbitrarily big, bigger than possible row.
-    private final static int prime = 11;
     private final int[] points = new int[]{0, 0, 0, 1, 1, 2, 3, 5, 11};
     private CustomTrieSET trieSET = new CustomTrieSET();
-    private Set<String> foundWords = new HashSet<>();
+    private List<String> foundWords = new ArrayList<>();
     // starting at 12 going clockwise
     private final int[] columnDirection = new int[]{0, 1, 1, 1, 0, -1, -1, -1};
     private final int[] rowDirection = new int[]{-1, -1, 0, 1, 1, 1, 0, -1};
+    private StringBuilder stringBuilder = new StringBuilder();
 
     // Initializes the data structure using the given array of strings as the dictionary.
     // (You can assume each word in the dictionary contains only the uppercase letters A through Z.)
@@ -37,19 +35,23 @@ public class BoggleSolver {
     // Returns the set of all valid words in the given Boggle board, as an Iterable.
     public Iterable<String> getAllValidWords(BoggleBoard board) {
         foundWords.clear();
+        stringBuilder.delete(0, stringBuilder.toString().length());
+        boolean[][] alreadyVisited = new boolean[board.rows()][board.cols()];
         for (int i = 0; i < board.rows(); i++) {
             for (int j = 0; j < board.cols(); j++) {
-                Set<Integer> alreadyCheckedSet = new HashSet<>();
-                alreadyCheckedSet.add(i * prime + j);
-                checkForWord(i, j, "", alreadyCheckedSet, foundWords, board, trieSET.getRoot());
+                alreadyVisited[i][j] = true;
+                checkForWord(i, j, "", alreadyVisited, foundWords, board, trieSET.getRoot());
+                alreadyVisited[i][j] = false;
             }
         }
-        return foundWords;
+        return new LinkedHashSet<>(foundWords);
     }
 
-    private void checkForWord(int row, int column, String stringUntilNow, Set<Integer> alreadyCheckedSet,
-                              Set<String> foundWords, BoggleBoard board, CustomTrieSET.Node node) {
+    private void checkForWord(int row, int column, String stringUntilNow, boolean[][] alreadyVisited,
+                              List<String> foundWords, BoggleBoard board, CustomTrieSET.Node node) {
 
+
+        // Try moving this into the other for loop? meh.
         char ijChar = board.getLetter(row, column);
 
         // The key optimization? Check to see if the node contains a words that has this prefix.
@@ -58,20 +60,18 @@ public class BoggleSolver {
         if (newNode == null) {
             return;
         }
+        String newString;
         if (ijChar == 'Q') {
             newNode = newNode.getNext()['U' - 65];
             if (newNode == null) {
                 return;
             }
-        }
-
-
-        String newString;
-        if (ijChar == 'Q') {
-            newString = stringUntilNow + "QU";
+            newString = stringBuilder.append(stringUntilNow).append("QU").toString();
         } else {
-            newString = stringUntilNow + ijChar;
+            newString = stringBuilder.append(stringUntilNow).append(ijChar).toString();
         }
+
+        stringBuilder.delete(0, stringBuilder.toString().length());
         // Check if it contains the found letters until now.
         if (newNode.isString() && newString.length() > 2) {
             foundWords.add(newString);
@@ -85,16 +85,14 @@ public class BoggleSolver {
                     column + columnDirection[i] < 0 || column + columnDirection[i] >= board.cols()) {
                 continue;
             }
-            int uniqueIJPairNumber = (row + rowDirection[i]) * prime + column + columnDirection[i];
-            // If this (i,j) combo has already been checked, return. Row*prime + column should be unique
-            // for column size up to prime which is 997. Doing this instead of list for optimization.
-            if (alreadyCheckedSet.contains(uniqueIJPairNumber)) {
+            if (alreadyVisited[row + rowDirection[i]][column + columnDirection[i]]) {
                 continue;
             }
-            Set<Integer> newAlreadyCheckedSet = new HashSet<>(alreadyCheckedSet);
-            newAlreadyCheckedSet.add(uniqueIJPairNumber);
-            checkForWord(row + rowDirection[i], column + columnDirection[i], newString, newAlreadyCheckedSet,
+            alreadyVisited[row + rowDirection[i]][column + columnDirection[i]] = true;
+
+            checkForWord(row + rowDirection[i], column + columnDirection[i], newString, alreadyVisited,
                     foundWords, board, newNode);
+            alreadyVisited[row + rowDirection[i]][column + columnDirection[i]] = false;
         }
     }
 
@@ -132,10 +130,11 @@ public class BoggleSolver {
             score += solver.scoreOf(word);
         }
 
-//        Collections.sort(stringList);
-//        for (String word : stringList) {
-//            StdOut.println(word);
-//        }
+        Collections.sort(stringList);
+        StdOut.println(stringList.size());
+        for (String word : stringList) {
+            StdOut.println(word);
+        }
         StdOut.println("Score = " + score);
     }
 }

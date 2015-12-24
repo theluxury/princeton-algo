@@ -1,7 +1,7 @@
 /******************************************************************************
  *  Compilation:  javac BoggleGame.java
  *  Execution:    java BoggleGame [M N]
- *  Dependencies: BoggleSolver.java BoggleBoard.java 
+ *  Dependencies: BoggleSolver.java BoggleBoard.java
  *  Author:       Matthew Drabick
  *
  *  GUI for the boggle solver. Pits the user against a computer opponent
