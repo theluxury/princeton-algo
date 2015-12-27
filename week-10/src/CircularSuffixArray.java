@@ -7,22 +7,26 @@ import java.util.List;
  */
 public class CircularSuffixArray {
 
-    List<CSAReference> csaReferenceList;
+    private List<CSAReference> csaReferenceList;
 
     private class CSAReference implements Comparable<CSAReference> {
 
-        final int index;
+        private final int index;
         private String string;
+        private final int length;
 
         public CSAReference(int index, String string) {
             this.index = index;
             this.string = string;
+            this.length = string.length();
         }
 
         public int compareTo(CSAReference that) {
-            for (int i = 0; i < string.length(); i++) {
-                char thisChar = string.charAt((index + i) % string.length()); // Modulo for wrap around.
-                char thatChar = string.charAt((that.index + i) % string.length()); // string should be same
+            for (int i = 0; i < length(); i++) {
+                int thisCharAt = index + i >= length ? index + i - length : index + i; // For wrap around.
+                int thatCharAt = that.index + i >= length ? that.index + i - length : that.index + i;
+                char thisChar = string.charAt(thisCharAt);
+                char thatChar = string.charAt(thatCharAt);
                 if (thisChar > thatChar) {
                     return 1;
                 } else if (thisChar < thatChar) {

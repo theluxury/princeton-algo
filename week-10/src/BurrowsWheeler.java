@@ -7,7 +7,7 @@ import java.util.*;
  * Created by theluxury on 12/26/15.
  */
 public class BurrowsWheeler {
-    private static int R = 255;
+    private static final int R = 255;
 
     // apply Burrows-Wheeler encoding, reading from standard input and writing to standard output
     // Okay encode is good.
@@ -23,9 +23,15 @@ public class BurrowsWheeler {
         }
         BinaryStdOut.write(first);
         for (int i = 0; i < s.length(); i++) {
+            int index = circularSuffixArray.index(i);
+            if (index == 0) {
+                BinaryStdOut.write(s.charAt(s.length() - 1));
+            } else {
+                BinaryStdOut.write(s.charAt(index - 1));
+            }
             // The char at the final column is the one right before the index fcn. Adding the string.length
             // to fix -1 error.
-            BinaryStdOut.write(s.charAt((circularSuffixArray.index(i) + s.length() - 1) % s.length()));
+            // BinaryStdOut.write(s.charAt((circularSuffixArray.index(i) + s.length() - 1) % s.length()));
             // System.out.print(string.charAt((circularSuffixArray.index(i) + string.length() - 1) % string.length()));
         }
         BinaryStdOut.close();
