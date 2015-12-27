@@ -33,10 +33,14 @@ public class BurrowsWheeler {
     }
 
     // apply Burrows-Wheeler decoding, reading from standard input and writing to standard output
-    // 
-    public static void decode(String string) {
+    //
+    public static void decode() {
         // First, get sorted char array of string.
-        int first = 3;
+        int first = BinaryStdIn.readInt();
+        String string = "";
+        while (!BinaryStdIn.isEmpty()) {
+            string += BinaryStdIn.readChar();
+        }
         char[] sortedChars = string.toCharArray();
         Arrays.sort(sortedChars);
 
@@ -65,16 +69,17 @@ public class BurrowsWheeler {
             first = next[first];
         }
 
-        System.out.println(output);
-
+        BinaryStdOut.write(output);
+        BinaryStdOut.close();
     }
 
     // if args[0] is '-', apply Burrows-Wheeler encoding
     // if args[0] is '+', apply Burrows-Wheeler decoding
     public static void main(String[] args) {
-//        if (args[0].equals("-")) {
-//            encode();
-//        }
-        decode("ARD!RCAAAABB");
+        if (args[0].equals("-")) {
+            encode();
+        } else if (args[0].equals("+")) {
+            decode();
+        }
     }
 }
