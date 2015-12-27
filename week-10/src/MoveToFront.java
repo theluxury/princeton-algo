@@ -13,7 +13,7 @@ public class MoveToFront {
         char[] input = s.toCharArray();
 
         for (int i = 0; i < input.length; i++) {
-            BinaryStdOut.write(getIndexAndReorder(input[i], charArray));
+            BinaryStdOut.write(getIndexAndReorder(input[i], charArray), 8);
         }
 
         BinaryStdOut.close();
@@ -23,11 +23,11 @@ public class MoveToFront {
     public static void decode() {
         char[] charArray = getCharArray();
 
-        int r;
-        while ((r = BinaryStdIn.readInt()) != 0) {
-            BinaryStdOut.write(getCharAndReorder(r, charArray));
+        StringBuilder stringBuilder = new StringBuilder();
+        while (!BinaryStdIn.isEmpty()) {
+            stringBuilder.append(getCharAndReorder(BinaryStdIn.readInt(8), charArray));
         }
-
+        BinaryStdOut.write(stringBuilder.toString());
         BinaryStdOut.close();
     }
 

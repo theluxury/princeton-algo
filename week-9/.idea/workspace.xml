@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ac6fb71-4f75-4bf5-aefd-bd5a3bbf7c25" name="Default" comment="" />
+    <list default="true" id="5ac6fb71-4f75-4bf5-aefd-bd5a3bbf7c25" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../week-10/out/production/week-10/BurrowsWheeler.class" afterPath="$PROJECT_DIR$/../week-10/out/production/week-10/BurrowsWheeler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../week-10/out/production/week-10/MoveToFront.class" afterPath="$PROJECT_DIR$/../week-10/out/production/week-10/MoveToFront.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../week-10/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../week-10/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../week-10/src/BurrowsWheeler.java" afterPath="$PROJECT_DIR$/../week-10/src/BurrowsWheeler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../week-10/src/CircularSuffixArray.java" afterPath="$PROJECT_DIR$/../week-10/src/CircularSuffixArray.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../week-10/src/MoveToFront.java" afterPath="$PROJECT_DIR$/../week-10/src/MoveToFront.java" />
+    </list>
     <ignored path="week-9.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BoggleSolver.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BoggleSolver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BoggleSolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18505943">
-              <caret line="114" column="93" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="93" />
+            <state vertical-scroll-proportion="-8.62963">
+              <caret line="73" column="21" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomTrieSET.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CustomTrieSET.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CustomTrieSET.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.02538071">
               <caret line="62" column="10" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -128,8 +135,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -205,6 +210,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -588,6 +595,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/BoggleBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="41" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="41" />
+          <folding>
+            <marker date="1449228938000" expanded="true" signature="0:3" placeholder="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CustomTrieSET.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="10" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../algs4.jar!/edu/princeton/cs/algs4/TrieSET.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BoggleSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CustomTrieSET.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -649,26 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CustomTrieSET.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="10" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BoggleBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="41" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="41" />
-          <folding>
-            <marker date="1449228938000" expanded="true" signature="0:3" placeholder="/**...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/boggle/BoggleGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11658031">
@@ -685,8 +710,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BoggleSolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18505943">
-          <caret line="114" column="93" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="93" />
+        <state vertical-scroll-proportion="-8.62963">
+          <caret line="73" column="21" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BoggleBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="41" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="41" />
+          <folding>
+            <marker date="1449228938000" expanded="true" signature="0:3" placeholder="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CustomTrieSET.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02538071">
+          <caret line="62" column="10" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

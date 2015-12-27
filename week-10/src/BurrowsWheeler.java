@@ -1,7 +1,6 @@
 import edu.princeton.cs.algs4.BinaryStdIn;
 import edu.princeton.cs.algs4.BinaryStdOut;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 /**
@@ -37,10 +36,11 @@ public class BurrowsWheeler {
     public static void decode() {
         // First, get sorted char array of string.
         int first = BinaryStdIn.readInt();
-        String string = "";
+        StringBuilder stringBuilder = new StringBuilder();
         while (!BinaryStdIn.isEmpty()) {
-            string += BinaryStdIn.readChar();
+            stringBuilder.append(BinaryStdIn.readChar());
         }
+        String string = stringBuilder.toString();
         char[] sortedChars = string.toCharArray();
         Arrays.sort(sortedChars);
 
@@ -63,13 +63,13 @@ public class BurrowsWheeler {
         }
 
         // Construct text.
-        String output = "";
+        stringBuilder.delete(0, stringBuilder.length());
         for (int i = 0; i < string.length(); i++) {
-            output += sortedChars[first];
+            stringBuilder.append(sortedChars[first]);
             first = next[first];
         }
 
-        BinaryStdOut.write(output);
+        BinaryStdOut.write(stringBuilder.toString());
         BinaryStdOut.close();
     }
 
