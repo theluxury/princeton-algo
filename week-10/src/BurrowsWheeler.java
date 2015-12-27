@@ -1,10 +1,15 @@
 import edu.princeton.cs.algs4.BinaryStdIn;
 import edu.princeton.cs.algs4.BinaryStdOut;
 
+import java.lang.reflect.Array;
+import java.util.*;
+
 /**
  * Created by theluxury on 12/26/15.
  */
 public class BurrowsWheeler {
+    private static int R = 255;
+
     // apply Burrows-Wheeler encoding, reading from standard input and writing to standard output
     // Okay encode is good.
     public static void encode() {
@@ -28,15 +33,48 @@ public class BurrowsWheeler {
     }
 
     // apply Burrows-Wheeler decoding, reading from standard input and writing to standard output
+    // 
     public static void decode(String string) {
-        
+        // First, get sorted char array of string.
+        int first = 3;
+        char[] sortedChars = string.toCharArray();
+        Arrays.sort(sortedChars);
+
+        // Get map from character to linkedlist of order the character appears
+        Map<Character, Queue<Integer>> inorderLastColumn = new HashMap<>();
+        for (int i = 0; i < string.length(); i++) {
+            if (inorderLastColumn.get(string.charAt(i)) == null) {
+                Queue<Integer> queue = new LinkedList<>();
+                queue.add(i);
+                inorderLastColumn.put(string.charAt(i), queue);
+            } else {
+                inorderLastColumn.get(string.charAt(i)).add(i);
+            }
+        }
+
+        // Construct next
+        int[] next = new int[string.length()];
+        for (int i = 0; i < string.length(); i++) {
+            next[i] = inorderLastColumn.get(sortedChars[i]).poll();
+        }
+
+        // Construct text.
+        String output = "";
+        for (int i = 0; i < string.length(); i++) {
+            output += sortedChars[first];
+            first = next[first];
+        }
+
+        System.out.println(output);
+
     }
 
     // if args[0] is '-', apply Burrows-Wheeler encoding
     // if args[0] is '+', apply Burrows-Wheeler decoding
     public static void main(String[] args) {
-        if (args[0].equals("-")) {
-            encode();
-        }
+//        if (args[0].equals("-")) {
+//            encode();
+//        }
+        decode("ARD!RCAAAABB");
     }
 }
